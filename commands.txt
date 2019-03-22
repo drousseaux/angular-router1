@@ -1,0 +1,11 @@
+ng new router1 --routing
+cd router1
+npm install --save @angular/material @angular/cdk @angular/animations
+
+ng g m manager -m app --routing
+ng g m inventory -m app --routing
+ng g m pos -m app --routing
+ng g m user -m app --routing
+
+ng g c home -m app --inline-template --inline-style
+ng g c pageNotFound -m app --inline-template --inline-style
