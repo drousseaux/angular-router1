@@ -1,6 +1,8 @@
 ng new router1 --routing
 cd router1
 npm install --save @angular/material @angular/cdk @angular/animations
+npm install --save @angular/platform-browser
+npm install --save @angular/flex-layout
 
 ng g m manager -m app --routing
 ng g m inventory -m app --routing
