@@ -2,3 +2,19 @@
 /*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 /*@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";*/
+
+body {
+    margin: 0;
+}
+
+.margin-top {
+    margin-top: 16px;
+}
+
+.horizontal-padding {
+    margin-left: 16px;
+}    
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
