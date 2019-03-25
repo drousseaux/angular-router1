@@ -11,3 +11,6 @@ ng g m user -m app --routing
 
 ng g c home -m app --inline-template --inline-style
 ng g c pageNotFound -m app --inline-template --inline-style
+
+ng g c manager/manager -m manager -s -t
+ng g c manager/managerHome -m manager -s -t
