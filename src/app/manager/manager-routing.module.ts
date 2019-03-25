@@ -5,13 +5,8 @@ import { ManagerComponent } from './manager.component';
 import { ManagerHomeComponent } from './manager-home/manager-home.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ManagerComponent,
-    children: [
-      { path: '', redirectTo: '/manager/home', pathMatch: 'full' },
-      { path: 'home', component: ManagerHomeComponent },
-    ],
-  }
+  { path: '', redirectTo: '/manager/home', pathMatch: 'full' },
+  { path: 'home', component: ManagerHomeComponent }
 ];
 
 @NgModule({
