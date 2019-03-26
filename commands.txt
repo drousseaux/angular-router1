@@ -3,6 +3,7 @@ cd router1
 npm install --save @angular/material @angular/cdk @angular/animations
 npm install --save @angular/platform-browser
 npm install --save @angular/flex-layout
+npm install --save hammerjs
 
 ng g m manager -m app --routing
 ng g m inventory -m app --routing
@@ -14,3 +15,7 @@ ng g c pageNotFound -m app --inline-template --inline-style
 
 ng g c manager/manager -m manager -s -t
 ng g c manager/managerHome -m manager -s -t
+
+ng g m material --flat -m app
+ng g c manager/userManagement -m manager
+ng g c manager/receiptLookup -m manager
