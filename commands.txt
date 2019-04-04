@@ -23,3 +23,6 @@ ng g c manager/receiptLookup -m manager
 ng g c user/profile -m user
 ng g c user/navigationMenu -m user -t -s
 ng g c user/logout -m user -t -s
+
+ng g c pos/pos -m pos -t -s
+
