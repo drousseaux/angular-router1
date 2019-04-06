@@ -26,3 +26,9 @@ ng g c user/logout -m user -t -s
 
 ng g c pos/pos -m pos -t -s
 
+ng g c inventory -m inventory -t -s
+ng g c inventory/inventory-home -m inventory -t -s
+ng g c inventory/products -m inventory -t -s
+ng g c inventory/stock-entry -m inventory -t -s
+ng g c inventory/categories -m inventory -t -s
+

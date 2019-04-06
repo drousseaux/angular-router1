@@ -7,7 +7,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { ReceiptLookupComponent } from './receipt-lookup/receipt-lookup.component';
 
 const routes: Routes = [
-  { path: '', component:ManagerComponent, children: [
+  { path: '', component: ManagerComponent, children: [
       { path: '', redirectTo: '/manager/home', pathMatch: 'full' },
       { path: 'home', component: ManagerHomeComponent },
       { path: 'users', component: UserManagementComponent },
