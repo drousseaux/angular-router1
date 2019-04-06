@@ -2,12 +2,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManagerComponent } from './manager.component';
 
+import {
+  commonTestingModules,
+  commonTestingProviders
+} from '../common/common.testing';
+
 describe('ManagerComponent', () => {
   let component: ManagerComponent;
   let fixture: ComponentFixture<ManagerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        commonTestingModules
+      ],
+      providers: commonTestingProviders,
       declarations: [ ManagerComponent ]
     })
     .compileComponents();
