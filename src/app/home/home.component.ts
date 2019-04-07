@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +17,18 @@ import { LoginComponent } from '../login/login.component';
   `]
 })
 export class HomeComponent implements OnInit {
-  displayLogin = true;
+  // tslint:disable-next-line:variable-name
+  private _displayLogin = true;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.authStatus.subscribe(
+      authStatus => (this._displayLogin = ! authStatus.isAuthenticated)
+    );
   }
 
+  get displayLogin() {
+    return this._displayLogin;
+    }
 }
