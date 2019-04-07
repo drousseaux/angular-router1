@@ -15,13 +15,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthService } from './auth/auth.service';
 import { LoginComponent } from './login/login.component';
+import { UiService, SimpleDialogComponent } from './common/ui.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    SimpleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,10 @@ import { LoginComponent } from './login/login.component';
     FlexLayoutModule,
     MaterialModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    UiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
