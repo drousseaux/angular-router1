@@ -6,19 +6,19 @@ export abstract class CacheService {
         }
         return null;
     }
-    
+
     protected setItem(key: string, data: object | string) {
         if (typeof data === 'string') {
             localStorage.setItem(key, data);
         }
-        
-        localStorage.setItem(key, JSON.stringify(data))
+
+        localStorage.setItem(key, JSON.stringify(data));
     }
-    
+
     protected removeItem(key: string) {
         localStorage.removeItem(key);
     }
-    
+
     protected clear() {
         localStorage.clear();
     }
