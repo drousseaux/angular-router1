@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './auth/auth.service';
 import { LoginComponent } from './login/login.component';
 import { UiService, SimpleDialogComponent } from './common/ui.service';
+import { AuthHttpInterceptor } from './auth/auth-http-interceptor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,12 @@ import { UiService, SimpleDialogComponent } from './common/ui.service';
   ],
   providers: [
     AuthService,
-    UiService
+    UiService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHttpInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent]
 })
