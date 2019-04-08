@@ -101,7 +101,7 @@ export class AuthService extends CacheService {
   private setToken(jwt: string) {
     this.setItem('jwt', jwt);
   }
-  
+
   private getDecodedToken(): IAuthStatus {
     return decode(this.getItem('jwt'));
   }
