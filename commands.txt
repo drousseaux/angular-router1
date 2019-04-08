@@ -39,3 +39,5 @@ ng g c login -m app
 
 ng g s common/ui -m app --flat false
 
+ng g c navigation-menu -m app -t -s
+
