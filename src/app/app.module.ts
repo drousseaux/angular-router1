@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { UiService, SimpleDialogComponent } from './common/ui.service';
 import { AuthHttpInterceptor } from './auth/auth-http-interceptor';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
   ],
   providers: [
     AuthService,
+    AuthGuardService,
     UiService,
     {
       provide: HTTP_INTERCEPTORS,

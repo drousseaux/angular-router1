@@ -32,12 +32,14 @@ ng g c inventory/products -m inventory -t -s
 ng g c inventory/stock-entry -m inventory -t -s
 ng g c inventory/categories -m inventory -t -s
 
-ng g s auth -m app --flat false
+ng g s auth -m app --flat=true
 npm install jwt-decode fake-jwt-sign
 npm install -D @types/jwt-decode
 ng g c login -m app
 
-ng g s common/ui -m app --flat false
+ng g s common/ui -m app --flat=true
 
 ng g c navigation-menu -m app -t -s
+
+ng g s auth/auth-guard -m app --flat=true
 
