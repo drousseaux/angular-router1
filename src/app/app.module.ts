@@ -14,11 +14,11 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth/auth-guard.service';
 import { LoginComponent } from './login/login.component';
 import { UiService, SimpleDialogComponent } from './common/ui.service';
 import { AuthHttpInterceptor } from './auth/auth-http-interceptor';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
-import { AuthGuardService } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [

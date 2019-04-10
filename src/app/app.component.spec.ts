@@ -9,6 +9,7 @@ import { commonTestingModules,
 import { MediaObserver } from '@angular/flex-layout';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
         { provide: DomSanitizer, useClass: DomSanitizerFake },
         ]),
       declarations: [
-        AppComponent
+        AppComponent,
+        NavigationMenuComponent
       ],
     }).compileComponents();
   }));
