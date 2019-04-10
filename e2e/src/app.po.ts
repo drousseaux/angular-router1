@@ -6,6 +6,7 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('app-root app-home div span.mat-display-2')).getText() as Promise<string>;
+    // tslint:disable-next-line:max-line-length
+    return element(by.css('body app-root div.app-container mat-sidenav-container mat-sidenav-content app-home div app-login div mat-card mat-card-header div mat-card-title div')).getText() as Promise<string>;
   }
 }
